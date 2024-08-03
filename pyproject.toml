@@ -1,12 +1,12 @@
 [tool.poetry]
 name = "exceptme"
-version = "0.1.3"
+version = "0.1.4"
 description = ""
 authors = ["Nana Duah <gabano2005@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = ">=3.8"
 requests = "^2.32.3"
 
 
