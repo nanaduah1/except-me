@@ -31,6 +31,6 @@ except Exception as e:
     ```python
     MIDDLEWARE = [
         ...
-        'exceptme.middleware.ExceptMeMiddleware',
+        'exceptme.django.AnnounceExceptionMiddleware',
     ]
     ```

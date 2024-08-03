@@ -16,7 +16,11 @@ class AnnounceExceptionMiddleware:
         self.get_response = get_response
 
     def __call__(self, request):
-        return self.get_response(request)
+        try:
+            return self.get_response(request)
+        except Exception as e:
+            self.process_exception(request, e)
+            raise
 
     def process_exception(self, request, exception):
         if logger:
