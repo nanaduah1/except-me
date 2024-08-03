@@ -24,6 +24,8 @@ class SlackAlertHandler(Handler):
             "created",
             "relativeCreated",
             "thread",
+            "message",
+            "threadName",
         ]
 
     def emit(self, record: LogRecord):
@@ -66,7 +68,7 @@ class SlackAlertHandler(Handler):
                 slack_message["attachments"][0]["fields"].extend(
                     [
                         {
-                            "title": k,  # k.capitalize(),
+                            "title": k,
                             "value": str(getattr(record, k)),
                             "short": True,
                         }
