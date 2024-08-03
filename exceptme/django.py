@@ -36,4 +36,6 @@ class AnnounceExceptionMiddleware:
                     "origin": request.META.get("HTTP_ORIGIN"),
                 },
             )
+        else:
+            print(exception)
         return None
